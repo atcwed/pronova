@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SuperGame Vivid - PNG Edition (UI Moderna)</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bgCanvasWrap"><canvas id="bgCanvas"></canvas></div>
+
+  <div id="menu" class="overlay center">
+    <h1>SuperGame Vivid</h1>
+    <p class="tag">Colores vivos • Motor WebGL • Texturas PNG</p>
+    <div class="menu-controls">
+      <input id="playerName" placeholder="Tu nombre" />
+      <div class="row">
+        <button id="btnStart" class="btn primary">Iniciar</button>
+        <button id="btnHow" class="btn">Cómo jugar</button>
+      </div>
+    </div>
+    <div id="how" class="how hidden">
+      <p>Mueve la cámara con el ratón, haz click para mover al jugador. Recolecta 5 cristales para ganar.</p>
+    </div>
+  </div>
+
+  <div id="ui" class="overlay small hidden">
+    <div id="score">Cristales: 0 / 5</div>
+    <div id="timer">Tiempo: 0s</div>
+  </div>
+
+  <div id="end" class="overlay hidden">
+    <h2 id="endTitle"></h2>
+    <p id="endMessage"></p>
+    <div class="row">
+      <button id="btnRestart" class="btn primary">Jugar otra vez</button>
+      <button id="btnShare" class="btn">Compartir</button>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script type="module" src="bg.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

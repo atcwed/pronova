@@ -1,0 +1,23 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#gameCanvas,#bgCanvas{width:100%;height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:#020617;color:#fff;overflow:hidden}
+#bgCanvasWrap{position:fixed;left:0;top:0;right:0;bottom:0;z-index:0;pointer-events:none}
+#bgCanvas{width:100%;height:100%;display:block}
+#gameCanvas{position:fixed;left:0;top:0;z-index:1}
+.overlay{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));backdrop-filter:blur(8px);padding:20px;border-radius:14px;min-width:300px;text-align:center;border:1px solid rgba(255,255,255,0.06)}
+.center{max-width:420px}
+.overlay h1{font-size:32px;color:#ffd166;margin-bottom:6px}
+.overlay .tag{color:#ffe8b3;margin-bottom:12px}
+.menu-controls{display:flex;gap:10px;flex-direction:column;align-items:center}
+.row{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.btn{background:linear-gradient(90deg,#6ee7b7,#60a5fa);border:none;padding:10px 14px;border-radius:10px;color:#012;text-transform:uppercase;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(2,6,23,0.6);transform:translateY(0);transition:transform .18s ease,box-shadow .18s ease}
+.btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(2,6,23,0.7)}
+.btn.primary{background:linear-gradient(90deg,#ffb86b,#ff6bcb);color:#062}
+input{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);color:#fff;width:100%}
+.small{min-width:220px;min-height:48px}
+.hidden{display:none}
+#score{font-weight:800;color:#ffd166}
+#timer{color:#bfe9ff;font-size:14px;margin-top:6px}
+#end h2{color:#7efcdb;font-size:24px;margin-bottom:8px}
+#end p{color:#fff;opacity:0.95;margin-bottom:12px}
